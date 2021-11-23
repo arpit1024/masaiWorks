@@ -1,0 +1,20 @@
+ use assignment
+> db.users.insert({"age":31,"first_name":"Dedie","last_name":"Rodenburg","email":"drodenburg0@narod.ru","gender":"Male","ip_address":"165.50.241.244"})
+> db.users.insertMany([{"age":35,"first_name":"Colver","last_name":"Caen","email":"ccaen1@godaddy.com","gender":"Bigender","ip_address":"139.198.44.156"},
+{"age":43,"first_name":"Toinette","last_name":"Dowman","email":"tdowman2@aboutads.info","gender":"Genderqueer","ip_address":"51.9.158.16"},
+{"age":32,"first_name":"Hy","last_name":"Northill","email":"hnorthill3@earthlink.net","gender":"Polygender","ip_address":"3.255.95.209"},
+{"age":36,"first_name":"Rog","last_name":"Nangle","email":"rnangle4@php.net","gender":"Genderfluid","ip_address":"173.7.218.195"},
+{"age":45,"first_name":"Jaine","last_name":"Vasyukhnov","email":"jvasyukhnov5@about.me","gender":"Male","ip_address":"52.31.219.76"},
+{"age":33,"first_name":"Si","last_name":"McKnish","email":"smcknish6@sogou.com","gender":"Female","ip_address":"94.36.85.247"},
+{"age":40,"first_name":"Chickie","last_name":"Fuller","email":"cfuller7@boston.com","gender":"Polygender","ip_address":"197.192.217.137"},
+{"age":50,"first_name":"Amalie","last_name":"McCarrell","email":"amccarrell8@ustream.tv","gender":"Non-binary","ip_address":"121.153.65.33"},
+{"age":37,"first_name":"Moyra","last_name":"Bunworth","email":"mbunworth9@mashable.com","gender":"Bigender","ip_address":"62.208.124.223"}])
+
+> db.users.find()
+> db.users.findOne({"ip_address":"94.36.85.247"})
+> db.users.update({ "_id" : ObjectId("619bdc1c329ff1770096ff8e")},{"age":33,"first_name":"Arpit","last_name":"Shrivastava","email":"smcknish6@sogou.com","gender":"Male","ip_address":"94.36.85.247"})
+> db.users.updateMany({gender:"Male"},{$set: {"first_name":"SMITH"}})
+> db.users.remove({"_id" : ObjectId("619bd9b1329ff1770096ff89")})
+> db.users.deleteOne({gender:"Male"})
+> db.users.deleteMany({gender:"Male"}) 
+> db.dropDatabase()
